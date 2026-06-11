@@ -9,11 +9,28 @@
     "laravel/framework": "^10.0|^11.0|^12.0",
     "spatie/laravel-permission": "^6.0"
   },
+  "require-dev": {
+    "orchestra/testbench": "^8.0|^9.0|^10.0",
+    "phpunit/phpunit": "^10.5|^11.0"
+  },
   "autoload": {
     "psr-4": {
       "Shakeelnasafian\\PermissionManager\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Shakeelnasafian\\PermissionManager\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
   "extra": {
     "laravel": {
       "providers": [
