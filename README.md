@@ -12,8 +12,8 @@ Elegant admin UI for managing roles, permissions, and assignments on top of `spa
 - Import/Export (JSON + CSV)
 
 ## Requirements
-- PHP ^8.1
-- Laravel ^10 || ^11 || ^12
+- PHP ^8.2
+- Laravel ^11 || ^12
 - `spatie/laravel-permission` ^6
 
 ## Installation
@@ -134,7 +134,7 @@ composer install
 composer test
 ```
 
-CI runs the suite on every push and pull request across PHP 8.1–8.3 and Laravel 10/11/12.
+CI runs the suite on every push and pull request across PHP 8.2–8.4 and Laravel 11/12.
 
 ## License
 
