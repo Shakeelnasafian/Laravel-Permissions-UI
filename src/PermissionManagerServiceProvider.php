@@ -18,7 +18,10 @@ class PermissionManagerServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'permission-manager');
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+
+        if ($this->spatieIsInstalled()) {
+            $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        }
 
         $this->publishes([
             __DIR__ . '/../config/permission-manager.php' => config_path('permission-manager.php'),

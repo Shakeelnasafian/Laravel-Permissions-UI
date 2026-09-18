@@ -1,5 +1,7 @@
 # Laravel Spatie Permission Manager
 
+[![tests](https://github.com/Shakeelnasafian/laravel-permissions-ui/actions/workflows/tests.yml/badge.svg)](https://github.com/Shakeelnasafian/laravel-permissions-ui/actions/workflows/tests.yml)
+
 Elegant admin UI for managing roles, permissions, and assignments on top of `spatie/laravel-permission` - no Node build required.
 
 ## Features
@@ -10,8 +12,8 @@ Elegant admin UI for managing roles, permissions, and assignments on top of `spa
 - Import/Export (JSON + CSV)
 
 ## Requirements
-- PHP ^8.1
-- Laravel ^10 || ^11
+- PHP ^8.2
+- Laravel ^11 || ^12
 - `spatie/laravel-permission` ^6
 
 ## Installation
@@ -122,6 +124,17 @@ All routes are registered under the configured prefix. For a full list:
 ```bash
 php artisan route:list --path=permission-manager
 ```
+
+## Testing
+
+The package ships with an [Orchestra Testbench](https://github.com/orchestral/testbench) + PHPUnit suite covering the controllers, audit logging, the authorization middleware, and the migration guards.
+
+```bash
+composer install
+composer test
+```
+
+CI runs the suite on every push and pull request across PHP 8.2–8.4 and Laravel 11/12.
 
 ## License
 
